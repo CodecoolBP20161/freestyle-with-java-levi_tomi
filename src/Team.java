@@ -7,27 +7,17 @@ public class Team {
     public int defence;
     public int points;
     public int goal;
-    public int chance;
+    public double chance;
 
-    public Team(String name, int attack, int defence, int points) {
+    public Team(String name, int attack, int defence) {
         this.name = name;
         this.attack = attack;
         this.defence = defence;
-        this.points = points;
+        this.points = 0;
         this.goal = 0;
-        this.chance = (attack + defence);
+        this.chance = 0;
     }
 
 
 
 }
-//    public static String theMatch(Team t1, Team t2) {
-//        Match.boostHome(t1);
-//        Match.luckAway(t2);
-//        if (t1.attack > t2.attack) {
-//            return t1.name +" won the match";
-//        } else if (t1.attack < t2.attack){
-//            return t2.name +" won the match";
-//        }
-//        return "Draw ";
-//    }
