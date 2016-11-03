@@ -69,7 +69,7 @@ public class Match {
             t1.points += 1;
             t2.points += 1;
         }
-        return "----------\n Team: " + t1.name + "; points: "+ t1.points+"\n Team: " + t2.name + "; points: "+ t2.points+"\n\n";
+        return "Match Finished";
     }
 
     public static void main(String[] args) {

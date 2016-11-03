@@ -15,7 +15,7 @@ public class Printer {
         Team teamThree = new Team("Boldog", 50, 50);
         Team teamFour = new Team("Vasas", 55, 50);
 
-        List<Team> teamList = new ArrayList<Team>();
+        ArrayList<Team> teamList = new ArrayList<Team>();
         teamList.add(teamFour);
         teamList.add(teamOne);
         teamList.add(teamTwo);
@@ -50,20 +50,23 @@ public class Printer {
 
         Collections.sort(teamList, new Comparator<Team>() {
             public int compare(Team o1, Team o2) {
-                if (o1.points < o2.points){
-                    return 1;
-                } else if (o1.points > o2.points){
-                    return -1;
-                }
-                return 0;
+                return Integer.valueOf(o2.points).compareTo(o1.points);
             }
         });
 
-        for(Object team : teamList) {
-            System.out.println(team);
+        int count = 1;
+        for (int i = 0; i < teamList.size(); i++) {
+            System.out.println(count+".) Team: "+teamList.get(i).name + " with "+teamList.get(i).points + " points.");
+            count++;
         }
 
+
+
     }
+                //        for(Object team : teamList) {
+//            System.out.println(team);
+//        }
+
 
     public static void main(String[] args) {
         Printer.printer();
