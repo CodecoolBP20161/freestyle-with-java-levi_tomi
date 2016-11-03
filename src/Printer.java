@@ -1,4 +1,7 @@
-import java.util.ArrayList;
+import java.lang.reflect.Array;
+import java.util.*;
+
+import static java.util.Collections.*;
 
 /**
  * Created by levente on 2016.11.03..
@@ -7,10 +10,16 @@ public class Printer {
 
     public static void printer() {
 
-        Team bse = new Team("Ferencváros", 50, 50);
-        Team a = new Team("Újpest", 50, 50);
-        Team b = new Team("Boldog", 50, 50);
-        Team ifi = new Team("Vasas", 55, 50);
+        Team teamOne = new Team("Ferencváros", 50, 50);
+        Team teamTwo = new Team("Újpest", 50, 50);
+        Team teamThree = new Team("Boldog", 50, 50);
+        Team teamFour = new Team("Vasas", 55, 50);
+
+        List<Team> teamList = new ArrayList<Team>();
+        teamList.add(teamFour);
+        teamList.add(teamOne);
+        teamList.add(teamTwo);
+        teamList.add(teamThree);
 
 
         Match elso = new Match();
@@ -20,12 +29,12 @@ public class Printer {
         Match ot = new Match();
         Match hat = new Match();
 
-        String day1a = elso.theMatch(bse,ifi);
-        String day1b = masodik.theMatch(a,b);
-        String day2a = harm.theMatch(ifi,a);
-        String day2b = negy.theMatch(bse,b);
-        String day3a = ot.theMatch(a,bse);
-        String day3b = hat.theMatch(b,ifi);
+        String day1a = elso.theMatch(teamOne,teamFour);
+        String day1b = masodik.theMatch(teamTwo,teamThree);
+        String day2a = harm.theMatch(teamFour,teamTwo);
+        String day2b = negy.theMatch(teamOne,teamThree);
+        String day3a = ot.theMatch(teamTwo,teamOne);
+        String day3b = hat.theMatch(teamThree,teamFour);
 
         ArrayList matches = new ArrayList();
         matches.add(day1a);
@@ -39,9 +48,26 @@ public class Printer {
             System.out.println(matches.get(i));
         }
 
+        Collections.sort(teamList, new Comparator<Team>() {
+            public int compare(Team o1, Team o2) {
+                if (o1.points < o2.points){
+                    return 1;
+                } else if (o1.points > o2.points){
+                    return -1;
+                }
+                return 0;
+            }
+        });
+
+        for(Object team : teamList) {
+            System.out.println(team);
+        }
+
     }
 
     public static void main(String[] args) {
         Printer.printer();
+
+
     }
 }

@@ -10,7 +10,7 @@ public class Referee extends Modifier {
     }
 
     public static boolean hasEffect() {
-        if (scum() > 0.8){
+        if (scum() > 0.92){
             return true;
         }
         return false;

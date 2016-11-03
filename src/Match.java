@@ -2,7 +2,7 @@
  * Created by levente on 2016.11.02..
  */
 import org.omg.CORBA.Object;
-
+import java.util.Arrays;
 import java.util.ArrayList;
 
 public class Match {
@@ -19,14 +19,17 @@ public class Match {
         team.chance += homeAdvantage;
         team.chance *= luck;
         if (Referee.hasEffect()){
-            System.out.println("The ref is a scumbag");
-            team.chance *= 0.6;
+            System.out.println("The referee having a bad day");
+            team.chance *= 0.7;
         }
     }
 
     public static void luckAway(Team team) {
         double luck = (double)Math.random() +1 ;
         team.chance *= luck;
+        if (Referee.hasEffect()){
+            team.chance *= 0.6;
+        }
     }
 
     public static String theMatch(Team t1, Team t2) {
@@ -39,8 +42,6 @@ public class Match {
             Match.chanceToWin(t2);
             Match.boostHome(t1);
             Match.luckAway(t2);
-//            System.out.println("home " +t1.chance);
-//            System.out.println("b  " +t2.chance);
             if (Math.abs(t1.chance - t2.chance) > 20) {
                 if (t1.chance > t2.chance) {
                     turns++;
@@ -56,7 +57,7 @@ public class Match {
                 System.out.println(t1.name + " and " + t2.name + " missed");
             }
         }
-
+        System.out.println("Score = "+ t1.name+" "+ t1.goal + " : "+ t2.name +" "+ t2.goal);
         if (t1.goal > t2.goal) {
             t1.points += 3;
         }
@@ -68,53 +69,10 @@ public class Match {
             t1.points += 1;
             t2.points += 1;
         }
-        return "Score = "+ t1.name+" "+ t1.goal + " : "+ t2.name +" "+ t2.goal+"\n-------------";
+        return "----------\n Team: " + t1.name + "; points: "+ t1.points+"\n Team: " + t2.name + "; points: "+ t2.points+"\n\n";
     }
 
-
-
     public static void main(String[] args) {
-
-//        Team bse = new Team("Ferencváros", 50, 50);
-//        Team a = new Team("Újpest", 50, 50);
-//        Team b = new Team("Boldog", 50, 50);
-//        Team ifi = new Team("Vasas", 55, 50);
-//
-//
-//        Match elso = new Match();
-//        Match masodik = new Match();
-//        Match harm = new Match();
-//        Match negy = new Match();
-//        Match ot = new Match();
-//        Match hat = new Match();
-//
-//        String day1a = elso.theMatch(bse,ifi);
-//        String day1b = masodik.theMatch(a,b);
-//        String day2a = harm.theMatch(ifi,a);
-//        String day2b = negy.theMatch(bse,b);
-//        String day3a = ot.theMatch(a,bse);
-//        String day3b = hat.theMatch(b,ifi);
-//
-//        ArrayList matches = new ArrayList();
-//        matches.add(day1a);
-//        matches.add(day1b);
-//        matches.add(day2a);
-//        matches.add(day2b);
-//        matches.add(day3a);
-//        matches.add(day3b);
-
-//        System.out.println(x);
-//        System.out.println(xa);
-//        System.out.println(xb);
-//        System.out.println(xc);
-//        System.out.println(xd);
-//        System.out.println(xe);
-//
-//        System.out.println("Fradi " +bse.points);
-//        System.out.println("ute " +ifi.points);
-//        System.out.println("vasas " +a.points);
-//        System.out.println("Boldog " +b.points);
-
 
     }
 }

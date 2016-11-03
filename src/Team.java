@@ -18,6 +18,7 @@ public class Team {
         this.chance = 0;
     }
 
-
-
+    public String toString() {
+        return "Team "+this.name +" points: "+this.points;
+    }
 }
