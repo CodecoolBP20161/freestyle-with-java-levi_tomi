@@ -3,12 +3,12 @@
  */
 public class Referee extends Modifier {
 
-    public static double scum() {
+    private static double scum() {
         Referee x = new Referee();
         double t = x.effect;
         return t;
     }
-
+// This gets passed to the Match class
     public static boolean hasEffect() {
         if (scum() > 0.92){
             return true;

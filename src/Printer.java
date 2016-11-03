@@ -1,4 +1,3 @@
-import java.lang.reflect.Array;
 import java.util.*;
 
 import static java.util.Collections.*;
@@ -8,7 +7,7 @@ import static java.util.Collections.*;
  */
 public class Printer {
 
-    public static void printer() {
+    private static void printer() {
 
         Team teamOne = new Team("Ferencváros", 50, 50);
         Team teamTwo = new Team("Újpest", 50, 50);
@@ -55,6 +54,7 @@ public class Printer {
         });
 
         int count = 1;
+        System.out.println("\n\nFinal Result:\n");
         for (int i = 0; i < teamList.size(); i++) {
             System.out.println(count+".) Team: "+teamList.get(i).name + " with "+teamList.get(i).points + " points.");
             count++;
@@ -63,14 +63,8 @@ public class Printer {
 
 
     }
-                //        for(Object team : teamList) {
-//            System.out.println(team);
-//        }
-
 
     public static void main(String[] args) {
         Printer.printer();
-
-
     }
 }
