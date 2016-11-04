@@ -15,10 +15,7 @@ public class Match {
         double homeAdvantage = Match.homeBoost;
         team.chance += homeAdvantage;
         team.chance *= luck;
-        if (Referee.hasEffect()){
-            System.out.println("The referee having a bad day");
-            team.chance *= 0.8;
-        }
+
     }
 // Same as above, except for the bad refereeing, it takes a heavier toll here.
     private static void luckAway(Team team) {
@@ -30,16 +27,20 @@ public class Match {
     }
 
     public String theMatch(Team t1, Team t2) {
+        // Count team goals during the match, + set them to 0, if a new match starts
         t2.goal = 0;
         t1.goal = 0;
+        // a match divided into 5 turns
         int turns = 0;
         System.out.println("-------------");
         while (turns != 5) {
+            // calculates chances/turn to score a goal
             Match.chanceToWin(t1);
             Match.chanceToWin(t2);
             Match.boostHome(t1);
             Match.luckAway(t2);
-            if (Math.abs(t1.chance - t2.chance) > 20) {
+            // Turns result is a draw, if the abs diff between team.chances less than 25
+            if (Math.abs(t1.chance - t2.chance) > 25) {
                 if (t1.chance > t2.chance) {
                     turns++;
                     t1.goal += 1;

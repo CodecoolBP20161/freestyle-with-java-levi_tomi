@@ -26,7 +26,7 @@ public class Printer {
         teamList.add(teamFive);
         teamList.add(teamSix);
 
-
+        // Clean code disgrace (CCD)
         Match one = new Match();
         Match two = new Match();
         Match three = new Match();
@@ -63,8 +63,8 @@ public class Printer {
 
         String day3e = fourteen.theMatch(teamFour,teamFive);
         String day3f = fifteen.theMatch(teamSix,teamFour);
-
-
+        // CCD ends here
+        // sorts teams by their points
         Collections.sort(teamList, new Comparator<Team>() {
             public int compare(Team o1, Team o2) {
                 return Integer.valueOf(o2.points).compareTo(o1.points);
