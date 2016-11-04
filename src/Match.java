@@ -15,6 +15,10 @@ public class Match {
         double homeAdvantage = Match.homeBoost;
         team.chance += homeAdvantage;
         team.chance *= luck;
+        if (Referee.hasEffect()){
+            System.out.println("Referee makes mistakes");
+            team.chance *= 0.75;
+        }
 
     }
 // Same as above, except for the bad refereeing, it takes a heavier toll here.
@@ -22,7 +26,7 @@ public class Match {
         double luck = (double)Math.random() +1 ;
         team.chance *= luck;
         if (Referee.hasEffect()){
-            team.chance *= 0.7;
+            team.chance *= 0.6;
         }
     }
 
@@ -39,6 +43,15 @@ public class Match {
             Match.chanceToWin(t2);
             Match.boostHome(t1);
             Match.luckAway(t2);
+            // The greatest disaster for a football team, if the fans can't behave. Match suspended, both teams get punished.
+            if(Hooligans.hasEffect()){
+                System.out.println("RIOT!! Fight broke out between fans");
+                t1.points -= 1;
+                t1.goal = 0;
+                t2.goal = 0;
+                t2.points -= 1;
+                break;
+            }
             // Turns result is a draw, if the abs diff between team.chances less than 25
             if (Math.abs(t1.chance - t2.chance) > 25) {
                 if (t1.chance > t2.chance) {

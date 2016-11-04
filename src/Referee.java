@@ -10,7 +10,7 @@ public class Referee extends Modifier {
     }
 // This gets passed to the Match class
     public static boolean hasEffect() {
-        if (scum() > 0.92){
+        if (scum() > 0.90){
             return true;
         }
         return false;

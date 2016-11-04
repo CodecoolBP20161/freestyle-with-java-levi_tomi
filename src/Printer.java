@@ -10,12 +10,12 @@ public class Printer {
     private static void printer() {
 
 
-        Team teamOne = new Team("Arsenal", 82, 70);
+        Team teamOne = new Team("Arsenal", 82, 73);
         Team teamTwo = new Team("Barcelona", 85, 79);
         Team teamThree = new Team("Real M.", 83, 78);
-        Team teamFour = new Team("Bayern M.", 84, 74);
-        Team teamFive = new Team("Juventus", 79, 80);
-        Team teamSix = new Team("Felcsút", 34, 30);
+        Team teamFour = new Team("Bayern M.", 84, 77);
+        Team teamFive = new Team("Juventus", 81, 80);
+        Team teamSix = new Team("P.S.G.", 70, 74);
 
 
         ArrayList<Team> teamList = new ArrayList<Team>();
