@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f5b89e72-4b0c-4c75-9eac-4dd24da39574" name="Default" comment="">
+    <list default="true" id="f5b89e72-4b0c-4c75-9eac-4dd24da39574" name="Default" comment="done">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Match.java" afterPath="$PROJECT_DIR$/src/Match.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Printer.java" afterPath="$PROJECT_DIR$/src/Printer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Referee.java" afterPath="$PROJECT_DIR$/src/Referee.java" />
     </list>
     <ignored path="freestyle-with-java-levi_tomi.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -687,7 +684,7 @@
       <workItem from="1478166171780" duration="31403000" />
       <workItem from="1478211150328" duration="2328000" />
       <workItem from="1478247311686" duration="7859000" />
-      <workItem from="1478257633868" duration="1863000" />
+      <workItem from="1478257633868" duration="1924000" />
     </task>
     <task id="LOCAL-00001" summary="team implemented">
       <created>1478089568030</created>
@@ -759,11 +756,18 @@
       <option name="project" value="LOCAL" />
       <updated>1478255958274</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="done">
+      <created>1478261446877</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1478261446877</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50469000" />
+    <option name="totallyTimeSpent" value="50530000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1301" height="744" extended-state="6" />
@@ -844,7 +848,8 @@
     <MESSAGE value="Tidier here and there, added a few comments" />
     <MESSAGE value="extra teams needs to be added + matches" />
     <MESSAGE value="done(?)" />
-    <option name="LAST_COMMIT_MESSAGE" value="done(?)" />
+    <MESSAGE value="done" />
+    <option name="LAST_COMMIT_MESSAGE" value="done" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
