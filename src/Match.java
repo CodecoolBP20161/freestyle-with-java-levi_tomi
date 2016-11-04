@@ -46,10 +46,10 @@ public class Match {
             // The greatest disaster for a football team, if the fans can't behave. Match suspended, both teams get punished.
             if(Hooligans.hasEffect()){
                 System.out.println("RIOT!! Fight broke out between fans");
-                t1.points -= 1;
+                t1.points -= 2;
                 t1.goal = 0;
                 t2.goal = 0;
-                t2.points -= 1;
+                t2.points -= 2;
                 break;
             }
             // Turns result is a draw, if the abs diff between team.chances less than 25
