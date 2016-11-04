@@ -56,8 +56,11 @@ public class Match {
         }
         System.out.println("Score = "+ t1.name+" "+ t1.goal + " : "+ t2.name +" "+ t2.goal);
         // Determines how the teams will share poinst, based upon the result
+        t1.match += 1;
+        t2.match += 1;
         if (t1.goal > t2.goal) {
             t1.points += 3;
+
         }
         else if (t1.goal < t2.goal) {
             t2.points += 3;
