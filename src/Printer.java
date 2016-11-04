@@ -9,12 +9,13 @@ public class Printer {
 
     private static void printer() {
 
-        Team teamOne = new Team("A", 50, 50);
-        Team teamTwo = new Team("B", 50, 50);
-        Team teamThree = new Team("C", 50, 50);
-        Team teamFour = new Team("D", 55, 50);
-        Team teamFive = new Team("E", 50, 50);
-        Team teamSix = new Team("F", 50, 50);
+
+        Team teamOne = new Team("Arsenal", 82, 70);
+        Team teamTwo = new Team("Barcelona", 85, 79);
+        Team teamThree = new Team("Real M.", 83, 78);
+        Team teamFour = new Team("Bayern M.", 84, 74);
+        Team teamFive = new Team("Juventus", 79, 80);
+        Team teamSix = new Team("Felcsút", 34, 30);
 
 
         ArrayList<Team> teamList = new ArrayList<Team>();
@@ -40,25 +41,29 @@ public class Printer {
         Match twelve = new Match();
         Match thirteen = new Match();
         Match fourteen = new Match();
+        Match fifteen = new Match();
+
 
         String day1a = one.theMatch(teamOne,teamFour);
         String day1b = two.theMatch(teamTwo,teamThree);
         String day2a = three.theMatch(teamFour,teamTwo);
+
         String day2b = four.theMatch(teamOne,teamThree);
         String day3a = five.theMatch(teamTwo,teamOne);
         String day3b = six.theMatch(teamThree,teamFour);
 
-        ArrayList matches = new ArrayList();
-        matches.add(day1a);
-        matches.add(day1b);
-        matches.add(day2a);
-        matches.add(day2b);
-        matches.add(day3a);
-        matches.add(day3b);
+        String day1c = seven.theMatch(teamOne,teamFive);
+        String day2c = eight.theMatch(teamFive,teamThree);
+        String day3c = nine.theMatch(teamFive,teamTwo);
+        String day4c = ten.theMatch(teamFive,teamSix);
 
-        for (int i = 0; i < matches.size(); i++) {
-            System.out.println(matches.get(i));
-        }
+        String day2d = eleven.theMatch(teamOne,teamSix);
+        String day1d = twelve.theMatch(teamSix,teamThree);
+        String day3d = thirteen.theMatch(teamSix,teamTwo);
+
+        String day3e = fourteen.theMatch(teamFour,teamFive);
+        String day3f = fifteen.theMatch(teamSix,teamFour);
+
 
         Collections.sort(teamList, new Comparator<Team>() {
             public int compare(Team o1, Team o2) {
@@ -72,9 +77,6 @@ public class Printer {
             System.out.println(count+".) "+ teamList.get(i).toString());
             count++;
         }
-
-//        System.out.println(count+".) Team: "+teamList.get(i).name + " with "+teamList.get(i).points + " points.");
-
 
     }
 

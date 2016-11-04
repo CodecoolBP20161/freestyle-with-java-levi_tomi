@@ -22,6 +22,6 @@ public class Team {
     }
 // The toString was the key to solve issues with the Comparator
     public String toString() {
-        return "Team "+this.name +" | Played: "+this.match+" | Points: "+this.points;
+        return "Team: "+this.name +"\t | Played: "+this.match+"\t | Points: \t"+this.points;
     }
 }
