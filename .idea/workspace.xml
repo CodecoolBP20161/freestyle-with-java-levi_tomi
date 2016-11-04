@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f5b89e72-4b0c-4c75-9eac-4dd24da39574" name="Default" comment="done">
+    <list default="true" id="f5b89e72-4b0c-4c75-9eac-4dd24da39574" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="freestyle-with-java-levi_tomi.iws" />
@@ -684,7 +684,7 @@
       <workItem from="1478166171780" duration="31403000" />
       <workItem from="1478211150328" duration="2328000" />
       <workItem from="1478247311686" duration="7859000" />
-      <workItem from="1478257633868" duration="1924000" />
+      <workItem from="1478257633868" duration="1948000" />
     </task>
     <task id="LOCAL-00001" summary="team implemented">
       <created>1478089568030</created>
@@ -763,11 +763,18 @@
       <option name="project" value="LOCAL" />
       <updated>1478261446877</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="done">
+      <created>1478261493347</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1478261493347</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50530000" />
+    <option name="totallyTimeSpent" value="50554000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1301" height="744" extended-state="6" />
